@@ -91,7 +91,11 @@ try {
     System.out.print("enter the third number : ");
    int thNum = scanner.nextInt();
 
-   istrue(fNum,sNum,thNum);
+    if((fNum + sNum) == thNum){
+        System.out.println("the result is : true");
+    }else {
+        System.out.println("the result is : false");
+    }
 }catch (InputMismatchException e){
     System.out.println("Wrong input");
 }
@@ -117,7 +121,11 @@ try {
                 System.out.print("Enter the number :");
                 num1 = scanner.nextInt();
 
-                ckeckeven(num1);
+                if(num1 %2==0){
+                    System.out.println("the number is even");
+                }else {
+                    System.out.println("the number is odd");
+                }
 
                 System.out.println("do you want to continue (true /false)");
                 continuo = scanner.nextBoolean();
@@ -356,25 +364,7 @@ try {
             System.out.println(e.getMessage());
         }
     }
-    public static void ckeckeven(int num) throws Exception{
-        if(num%2==0){
-            throw new Exception("the number is even");
-        }else {
-            throw new Exception("the number is odd");
-        }
-    }
 
-    public static void istrue (int num1,int num2 ,int num3){
-        try{
-        if((num1 + num2) == num3){
-            throw new Exception("the resoult is true");
-        }else {
-            throw new Exception("the resoult is false");
-        }
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-    }
     public static void checksecond(int seconds) throws Exception{
         if(seconds<0){
             throw new Exception("seconds cant be negative");
